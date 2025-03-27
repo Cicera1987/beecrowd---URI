@@ -24,11 +24,9 @@ let max = Math.max(x, y);
 
 let sum = 0;
 
-const result = Array.from({ length: max - min + 1 }, (_, i) => min + i).reduce((acc, cur) => {
-    if (cur % 13 !== 0) {
-        acc += cur;
+for (let i = min; i <= max; i++){
+    if(i % 13 !== 0){
+        sum += i;
     }
-    return acc;
-}, sum);
-
-console.log(result);
+}
+console.log(sum);
